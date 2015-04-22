@@ -7,7 +7,9 @@ namespace Final_Project.Models
 {
     public class Video
     {
+
         public int VideoId { get; set; }
+        public int CatagoryId { get; set; }
         public string Title { get; set; }
         public DateTime Date { get; set; }
         public int Views { get; set; }

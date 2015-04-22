@@ -10,7 +10,6 @@ namespace Final_Project.Models
 
         public int AuthorId { get; set; }
         public String Name { get; set; }
-        public Video Videos { get; set; }
 
     }
 }
