@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Final_Project.Models.Category>
+
+@{
+    ViewBag.Title = "Video Library";
+}
+
+<h2>Browse Categories</h2>
+<p>
+    Choose from @Model.Count() categories:
+</p>
+<ul>
+    @foreach (var cat in Model)
+    {
+        <li>
+            @Html.ActionLink(cat.Name, "Browse", new { category = cat.Name })
+        </li>
+    }
+</ul>
+
