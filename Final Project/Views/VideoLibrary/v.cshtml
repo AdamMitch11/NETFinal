@@ -1,0 +1,32 @@
+﻿@model Final_Project.Models.Video
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="col-md-8">
+    <iframe width="100%" height="410" src="https://www.youtube.com/embed/@Model.VideoUrl?showinfo=0" frameborder="0"></iframe>
+    <div class="panel panel-default">
+        <h2>@Model.Title</h2>
+        @Html.ActionLink(Model.Author.Username, "")
+    </div>
+</div>
+<div class="col-lg-4 panel panel-default scroll">
+    @Html.Partial("Browse", Model.Category)
+</div>
+
+<div class="col-md-12 panel panel-default ">
+    <h4>All Comments</h4>
+    <form>
+        <textarea cols="50"  placeholder="Share your thoughts"></textarea>
+        <div class="pull-right">
+            <input class="btn btn-default" type="submit" />
+        </div>
+    </form>
+    
+    <hr />
+    <h5>No comments</h5>
+    @*("Details", new { Action = "Browse", catagory = Model.Category.Name })*@
+</div>
+
+

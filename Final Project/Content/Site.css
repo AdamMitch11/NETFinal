@@ -14,29 +14,24 @@ input,
 select,
 textarea {
     max-width: 280px;
+    border: 0px;
 }
 
-/* styles for validation helpers */
-.field-validation-error {
-    color: #b94a48;
+.panel {
+    
+     
 }
 
-.field-validation-valid {
-    display: none;
+.scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    
 }
 
-input.input-validation-error {
-    border: 1px solid #b94a48;
+.scroll, img {
+    
 }
 
-input[type="checkbox"].input-validation-error {
-    border: 0 none;
-}
-
-.validation-summary-errors {
-    color: #b94a48;
-}
-
-.validation-summary-valid {
-    display: none;
+@media screen and (max-width: 990px) {
+    
 }

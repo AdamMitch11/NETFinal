@@ -1,8 +1,25 @@
 ﻿@model Final_Project.Models.Category
-
 @{
     ViewBag.Title = "Browse";
 }
 
-<h2>Browsing Category: @Model.Name</h2>
+<h2>@Model.Name</h2> Choose from @Model.Videos.Count @Model.Name Videos
+
+<hr />
+
+<div class="row">
+    @foreach (var video in Model.Videos)
+    {
+        <div class="col-md-3 ">
+                <div class="img-responsive">
+                    <img src="https://i.ytimg.com/vi_webp/@video.VideoUrl/mqdefault.webp" />
+                    
+                </div>
+            <div class="text-justify">
+                <h4>@Html.ActionLink(video.Title, "v", new { id = video.VideoID })</h4>
+                <p>by @Html.ActionLink(video.Author.Username, "")</p>
+            </div>
+        </div>
+    }
+</div>
 

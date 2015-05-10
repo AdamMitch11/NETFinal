@@ -161,7 +161,16 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VideoLibraryController.cs" />
+    <Compile Include="Controllers\VideoManagerController.cs" />
     <Compile Include="DataContexts\VideoDb.cs" />
+    <Compile Include="DataContexts\VideoMigrations\201505041902408_InitialCreate.cs" />
+    <Compile Include="DataContexts\VideoMigrations\201505041902408_InitialCreate.Designer.cs">
+      <DependentUpon>201505041902408_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\VideoMigrations\201505041933046_UpdateSchema.cs" />
+    <Compile Include="DataContexts\VideoMigrations\201505041933046_UpdateSchema.Designer.cs">
+      <DependentUpon>201505041933046_UpdateSchema.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataContexts\VideoMigrations\Configuration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -221,8 +230,13 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\VideoLibrary\Index.cshtml" />
-    <Content Include="Views\VideoLibrary\Details.cshtml" />
+    <Content Include="Views\VideoLibrary\v.cshtml" />
     <Content Include="Views\VideoLibrary\Browse.cshtml" />
+    <Content Include="Views\VideoManager\Create.cshtml" />
+    <Content Include="Views\VideoManager\Delete.cshtml" />
+    <Content Include="Views\VideoManager\Details.cshtml" />
+    <Content Include="Views\VideoManager\Edit.cshtml" />
+    <Content Include="Views\VideoManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -233,6 +247,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataContexts\VideoMigrations\201505041902408_InitialCreate.resx">
+      <DependentUpon>201505041902408_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContexts\VideoMigrations\201505041933046_UpdateSchema.resx">
+      <DependentUpon>201505041933046_UpdateSchema.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

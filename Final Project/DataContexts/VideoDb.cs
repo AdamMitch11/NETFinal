@@ -12,5 +12,7 @@ namespace Final_Project.DataContexts
         public VideoDb() : base("DefaultConnection") { }
         public DbSet<Video> Videos { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public System.Data.Entity.DbSet<Final_Project.Models.Author> Authors { get; set; }
     }
 }
